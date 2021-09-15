@@ -36,6 +36,9 @@
       imgs.forEach((img) => {
         console.log('imgs forEach');
 
+        /**
+         * @notice 下面一行 alert 取消注释，则302图片能正常加载(意外发现)，请检查具体原因
+         */
         // alert('amazing alert');
         img.addEventListener('load', (e) => {
           alert(e.type + ' event: ' + img.dataset.src);
