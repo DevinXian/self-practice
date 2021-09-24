@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -7,7 +7,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/assets/img/:id', (req, res) => {
-  console.log('图片重定向接口已访问：' + req.url);
+  console.log(`图片重定向接口已访问：${req.url}`);
   res.redirect(302, '/images/icon.png');
 });
 
