@@ -2,6 +2,26 @@
 # yarn lockfile v1
 
 
+"@tencent/hel-lib-proxy@^3.9.3":
+  version "3.9.3"
+  resolved "https://mirrors.tencent.com/npm/@tencent/hel-lib-proxy/-/@tencent/hel-lib-proxy-3.9.3.tgz#9b875fbf4aadb0311721b146ff83b9d9c8f8186a"
+  integrity sha512-sAbJTK7UHuge+cs5HiyqYf1i+RjMcqbCUlR7ZK1yEK+EhkaUVJJprrzlUxlGfpIyjlrkA0iCRh6wbfKPqh4Pew==
+  dependencies:
+    "@tencent/hel-micro-core" ">=3.8.3"
+    "@tencent/hel-types" ">=3.0.0"
+
+"@tencent/hel-micro-core@>=3.8.3":
+  version "3.9.10"
+  resolved "https://mirrors.tencent.com/npm/@tencent/hel-micro-core/-/@tencent/hel-micro-core-3.9.10.tgz#5a9f1805f04829388306f8dec27012f4e547595d"
+  integrity sha512-52woH+wjI4OHCefPTSSyqYMSig59i7yI9r0v4xFWTFx8oV5P4mcIzBrvCMbTsFkDYCh0xuXlbc9C0pP0viAwIA==
+  dependencies:
+    "@tencent/hel-types" "^3.7.0"
+
+"@tencent/hel-types@>=3.0.0", "@tencent/hel-types@^3.7.0":
+  version "3.7.4"
+  resolved "https://mirrors.tencent.com/npm/@tencent/hel-types/-/@tencent/hel-types-3.7.4.tgz#9a60756d73a95c7595053e65bfa17ce17d5c4626"
+  integrity sha512-nYWTgxNyOuXyTAFp/YeRsS/UC6305/QPh7LC7QlS9oOuZ/N3IlsvNLvR8iyxXQIFlzrjRERUJ/SvqbAdaf/ylQ==
+
 accepts@~1.3.5:
   version "1.3.7"
   resolved "http://r.tnpm.oa.com/accepts/-/accepts-1.3.7.tgz#531bc726517a3b2b41f850021c6cc15eaab507cd"
