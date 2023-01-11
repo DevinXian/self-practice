@@ -1,32 +1,28 @@
 const { swap } = require('./util');
+const getGap = gap => Math.floor(gap / 2);
 
 const main = list => {
-  if (list.length <= 1) return list;
-  // 共插入 N-1 次
-  for (let i = 1; i < list.length; i++) {
-    const current = list[i];
-    let index = i - 1;
+  const len = list.length;
 
-    // while 循环显得更简单
-    // 也可以二分查找，然后移动
-    while (index >= 0 && list[index] > current) {
-      list[index + 1] = list[index];
-      index--;
+  if (len <= 1) return list;
+
+  let gap = Math.floor(len / 2);
+
+  // gap = 2
+  while (gap >= 1) {
+    // 子序列 - 直接插入
+    for (let i = gap; i < len; i++) {
+      let current = list[i];
+      let index = i - gap;
+
+      while (index >= 0 && list[index] > current) {
+        list[index + gap] = list[index]; // 大的后移
+        index -= gap;
+      }
+      list[index + gap] = current;
     }
-    list[index + 1] = current;
 
-    //   // 从后往前找合适位置插入
-    //   for (let j = i - 1; j >= 0; j--) {
-    //     if (list[j] > current) {
-    //       // 大的往后移动
-    //       list[j + 1] = list[j];
-    //     } else {
-    //       index = j + 1;
-    //       // list[j + 1] = current; // 不能这里，要考虑边界
-    //       break;
-    //     }
-    //   }
-    //   list[index] = current;
+    gap = getGap(gap);
   }
 
   return list;
